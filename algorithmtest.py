@@ -73,6 +73,7 @@ if __name__ == "__main__":
         X_test = X_test[:, 0:48]
 
         result = logistic.test(X_test, weight, threshold)
+        result = result.astype(np.float)
         acc = np.sum(result == test_label)/len(test_label)
         print(acc)
 

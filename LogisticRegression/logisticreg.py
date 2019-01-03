@@ -31,7 +31,6 @@ def test(X, weight, threshold):
     X = np.c_[bias, X]
     X = tools.normmatrix(X)
     result = p_1(X, weight)
-    pdb.set_trace()
     return (result > threshold)
 
 def p_1(X, weight):
